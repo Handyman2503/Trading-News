@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>TheEvent Bootstrap Template - Index</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+
+  <script async src="/lib/tagmngna.js"></script>
+
+  <link rel="shortcut icon" href="/lib/favicon/favicon.ico">
+  <meta name="msapplication-config" content="/lib/favicon/browserconfig.xml">
+
+  <meta name="format-detection" content="telephone=no">
+
+  <title>Compound Interest Calculator</title>
+  <meta content="Compound interest calculator online." name="description">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+     h1 { font-size:1.6rem; }
+     h2 { font-size:1.4rem; }
+     h3 { font-size:1.4rem; }
+     h4 { font-size:1.2rem; }
+     #wrapper td { padding:.75rem; }
+
+
+     #calcform {
+        padding:15px;
+        background:#eee8d5;
+        border:1px solid #eee;
+        border-radius:7px;
+        max-width:600px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 80px;
+     }
+
+     @media (max-width: 768px) {
+       #calcform {
+         padding:20px;
+
+         border:1px solid #eee;
+         border-radius:7px;
+         max-width:400px;
+         margin-left: auto;
+         margin-right: auto;
+         margin-top: 40px;
+       }
+     }
+
+
+
+
+     .btn i { vertical-align:middle; }
+     .input-group-append, .input-group-text{ background:#fff; }
+     .btn-outline-secondary { border:1px solid #ced4da; }
+     #tbl td { padding-left:30px; background:#fff; }
+     @media all and (max-width: 700px) {
+        /*#Select2, #Select3, #Select4 { margin-left:5px; margin-right:5px; }*/
+     }
+  .text10 {
+    float: right;
+    margin-right: 100px;
+  }
+
+  #calcform h1 {
+
+  text-align: center;
+  font-size: 30px;
+
+  }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!-- <h1><a href="#intro">The<span>Event</span></a></h1>-->
+        <a href="index.html" class="scrollto"><img src="assets/img/logo.png" alt="" title=""></a>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="etusivu"><a href="index.html">Etusivu</a></li>
+          <li><a href="index.html#schedule">Uutiset</a></li>
+          <li class="menu-active"><a href="#laskuri">Sijoittajan laskurit</a></li>
+          <li><a href="markkina.html">Markkina</a></li>
+          <li><a href="#contact">Ota yhteyttä</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- End Header -->
+<section id="laskuri">
+
+
+
+<div class="laskuri">
+
+
+
+          <h1>Korkoa korolle laskuri</h1>
+          <form id="calcform" name="calcform" autocomplete="off">
+            <h1>Korkoa korolle laskuri</h1>
+          <div class="form-group">
+          <label for="Select1">Valuutta</label>
+          <select id="Select1" onchange="OnCurrencyChange()" class="form-control">
+          <option selected>Euro (&euro;)</option>
+          <option>Dollar ($)</option>
+          <option>Pound (&pound;)</option>
+          <option>Baht (&#3647;)</option>
+          <option>Krona (kr)</option>
+          <option>Leu (L)</option>
+          <option>Lira (t)</option>
+          <option>Peso (&#8369;)</option>
+          <option>Rand (R)</option>
+          <option>Real (R$)</option>
+          <option>Ringgit (RM)</option>
+          <option>Rupee (R)</option>
+          <option>Rupee (Rs)</option>
+          <option>Shekel (&#8362;)</option>
+          <option>Zloty (z&#322;)</option>
+          <option>- other -</option>
+          </select>
+          </div>
+          <div class="form-group">
+          <label for="Text1">Alkusijoitus</label>
+          <div class="input-group">
+          <div class="input-group-prepend">
+          <span class="input-group-text" id="cur1">&euro;</span>
+          </div>
+          <input type="number" min="0" step="any" id="Text1" placeholder="1000" class="form-control" autofocus>
+          <div class="input-group-append">
+          <button type="button" onclick="OnClear(0)" class="btn btn-outline-secondary">&times;</button>
+          </div>
+          </div>
+          </div>
+          <div class="form-group">
+          <label for="Text2">Korko</label><p class="text10">Laske korko</p>
+          <div class="input-group">
+          <input type="number" step="any" id="Text2" class="form-control" placeholder="4">
+          <div class="input-group-append">
+          <span class="input-group-text">%</span>
+          </div>
+          <div class="input-group-append ml-1">
+          <select id="Select2" class="form-control">
+          <option>Kuukausittain</option>
+          <option>Neljännesvuosittain</option>
+          <option selected>Vuosittain</option>
+          </select>
+          </div>
+          </div>
+          </div>
+          <div class="form-group">
+          <label for="Text4">Säästöaika</label>
+          <div class="input-group">
+          <input type="number" min="1" step="any" id="Text4" class="form-control" placeholder="10">
+          <div class="input-group-append ml-1">
+          <select id="Select4" name="Select4" class="form-control">
+          <option>Päivää</option>
+          <option>Viikkoa</option>
+          <option>Kuukautta</option>
+          <option>Neljännesvuotta</option>
+          <option selected="selected">Vuotta</option>
+          </select>
+          </div>
+          </div>
+          </div>
+          <div class="form-group">
+          <label for="Text3">Säännöllinen sijoitus (valinnainen)</label>
+          <div class="input-group">
+          <div class="input-group-prepend">
+          <span class="input-group-text" id="cur2">&euro;</span>
+          </div>
+          <input type="number" step="any" id="Text3" placeholder="0" class="form-control">
+          <div class="input-group-append">
+          <button type="button" onclick="OnClear(1)" class="btn btn-outline-secondary">&times;</button>
+          </div>
+          <div class="input-group-append ml-1">
+          <select id="Select3" class="form-control">
+
+          <option selected>Kuukausitalletus</option>
+          <option>Neljännesvuosittain</option>
+          <option>Vuosittain</option>
+          </select>
+          </div>
+          </div>
+          </div>
+          <div id="addpaydiv" class="form-group mb-3">
+          <label for="addpay-start" class="row ml-0">Lisäsijoitus kuukauden</label>
+          <div class="btn-group btn-group-toggle row ml-0" data-toggle="buttons">
+          <label class="btn btn-secondary active">
+          <input type="radio" name="addpay" id="addpay-start" checked> Alussa
+          </label>
+          <label class="btn btn-secondary">
+          <input type="radio" name="addpay" id="addpay-end"> Lopussa
+          </label>
+          </div>
+          </div>
+          <div class="form-group mt-4">
+          <button type="button" onclick="OnCalc()" class="btn btn-secondary"><i class="material-icons">settings</i> Laske</button>
+          <button type="button" onclick="OnClear(2)" class="btn btn-secondary"><i class="material-icons">clear</i> Tyhjennä</button>
+          </div>
+          <div class="form-group">
+          <label>Summa yhteensä</label>
+          <div class="input-group">
+          <div class="input-group-prepend">
+          <span class="input-group-text" id="cur5">&euro;</span>
+          </div>
+          <input type="text" id="Text7" class="form-control" readonly>
+          </div>
+          </div>
+          <div class="form-group">
+          <label>Talletukset</label>
+          <div class="input-group">
+          <div class="input-group-prepend">
+          <span class="input-group-text" id="cur3">&euro;</span>
+          </div>
+          <input type="text" id="Text5" class="form-control" readonly>
+          </div>
+          </div>
+          <div class="form-group">
+          <label>Kokonaistuotto</label>
+          <div class="input-group">
+          <div class="input-group-prepend">
+          <span class="input-group-text" id="cur4">&euro;</span>
+          </div>
+          <input type="text" id="Text6" class="form-control" readonly>
+          </div>
+          </div>
+          <div class="form-group">
+          <label>Tuottoprosentti</label>
+          <div class="input-group">
+          <input type="text" id="Text8" class="form-control" readonly>
+          <div class="input-group-append">
+          <span class="input-group-text">%</span>
+          </div>
+          </div>
+          </div>
+          <div class="form-group">
+          <label>Tulevaisuuden arvo</label>
+          <div id="piechart" style="width:100%; height: 200px;"></div>
+          </div>
+          <div class="form-group">
+          <label>Arvonkehitys</label>
+          <div id="columnchart" style="width:100%; height: 200px;"></div>
+          </div>
+          <div id="tbldiv" class="form-group">
+          <label>Arvonkehityksen vaiheet</label>
+          <table class="table" id="tbl">
+          <tr>
+          <th>Lisäys<br>Nro</th>
+          <th>Summa</th>
+          <th>Kokonaissumma</th>
+          </tr>
+          </table>
+          </div>
+          </form>
+
+
+</div>
+
+
+
+
+
+
+</section>
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="section-bg">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Ota yhteyttä</h2>
+          <p>Voit kysyä vinkkejä myös sähköpostilla</p>
+        </div>
+
+        <div class="row contact-info">
+
+          <div class="col-md-4">
+            <div class="contact-address">
+              <i class="ion-ios-location-outline"></i>
+              <h3>Address</h3>
+              <address>A108 Adam Street, NY 535022, USA</address>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="ion-ios-telephone-outline"></i>
+              <h3>Phone Number</h3>
+              <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="ion-ios-email-outline"></i>
+              <h3>Email</h3>
+              <p><a href="mailto:info@example.com">info@example.com</a></p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="form">
+          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validate"></div>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validate"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <div class="validate"></div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+              <div class="validate"></div>
+            </div>
+            <div class="mb-3">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+            </div>
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <img src="assets/img/logo.png" alt="TheEvenet">
+            <p>In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et totam porro. Perspiciatis ad omnis fugit molestiae recusandae possimus. Aut consectetur id quis. In inventore consequatur ad voluptate cupiditate debitis accusamus repellat cumque.</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Home</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">About us</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Services</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Home</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">About us</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Services</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="fa fa-angle-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>TheEvent</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+        All the links in the footer should remain intact.
+        You can delete the links only if you purchased the pro version.
+        Licensing information: https://bootstrapmade.com/license/
+        Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
+      -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/superfish/superfish.min.js"></script>
+  <script src="assets/vendor/hoverIntent/hoverIntent.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script>
+     "use strict"
+     var depamount,intamount;
+     var val,pay;
+     window.onload=function() {
+        $("#calcform>div:nth-child(n+12)").hide();
+        OnCalc();
+     };
+     function OnClear(n)
+     {
+        if( n==0 )
+        {
+           document.getElementById("Text1").value = '';
+           document.getElementById("Text1").focus();
+        }
+        else if( n==1 )
+        {
+           document.getElementById("Text3").value = '';
+           document.getElementById("Text3").focus();
+        }
+        else
+        {
+           document.getElementById("Text1").value = '';
+           document.getElementById("Text2").value = '';
+           document.getElementById("Text5").value = '';
+           document.getElementById("Text6").value = '';
+           document.getElementById("Text7").value = '';
+           document.getElementById("Text8").value = '';
+           document.getElementById("Text1").focus();
+        }
+     }
+     function OnCurrencyChange()
+     {
+        var c_look=['&euro;','$','&pound;','&#3647;','kr','L','t','&#8369;','R','R$','RM','R','Rs','&#8362;','z&#322;',''];
+        var i = document.getElementById("Select1").selectedIndex;
+        var c = c_look[i];
+        document.getElementById("cur1").innerHTML = c;
+        document.getElementById("cur2").innerHTML = c;
+        document.getElementById("cur3").innerHTML = c;
+        document.getElementById("cur4").innerHTML = c;
+        document.getElementById("cur5").innerHTML = c;
+     }
+     function DrawTable(v,pay,ratio)
+     {
+        var c_look=['&euro;','$','&pound;','&#3647;','kr','L','t','&#8369;','R','R$','RM','R','Rs','&#8362;','z&#322;',''];
+        var i = document.getElementById("Select1").selectedIndex;
+        var c = c_look[i];
+        var value,p,n,f;
+        $("#tbl").find("tr:gt(0)").remove();
+        n = v.length;
+        for(var i=0; i<n; i++) {
+           p=0;
+           f=(i+1)/ratio;
+           //if( (i>0) && (f==Math.round(f)) )
+           if( f==Math.round(f) )
+              p=pay;
+           p = numberWithCommas(p);
+           value = numberWithCommas(v[i].toFixed(2));
+           $('#tbl tr').eq(i).after("<tr>\
+              <td>"+i+"</td>\
+              <td>"+c+p+"</td>\
+              <td>"+c+value+"</td>\
+           </tr>");
+        }
+        $(".calc tr:nth-child(n+12)").show();
+        $("#tbldiv").show();
+     }
+     function numberWithCommas(x)
+     {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+     }
+     function CompoundCalc(PV,i,dV,n1,n2,n,iaddpay)
+     {
+        //FV = PV*Math.pow((1+i/100),n);
+        var f;
+        //var v=[];
+        var prevv=PV;
+        var v=[prevv];
+        if( iaddpay==0 ) v[0]=prevv+dV;
+        //for(var k=0; k<n; k++)
+        for(var k=1; k<=n; k++)
+        {
+           v[k]=prevv;
+           f=(k+1)/n2;
+           if( f==Math.round(f) && iaddpay==0 )
+              v[k]+=dV;
+           f=(k+1)/n1;
+           if( f==Math.round(f) )
+              v[k]=v[k]*(1+i/100.0);
+           f=(k+1)/n2;
+           if( f==Math.round(f) && iaddpay==1 )
+              v[k]+=dV;
+           prevv=v[k];
+        }
+        return v;
+     }
+     function OnCalc()
+     {
+        var x0 = document.getElementById("Text1").value;
+        var rate = document.getElementById("Text2").value;
+        var i1 = document.getElementById("Select2").selectedIndex;
+        var x1 = document.getElementById("Text3").value;
+        var i2 = document.getElementById("Select3").selectedIndex;
+        var period = document.getElementById("Text4").value;
+        var i3 = document.getElementById("Select4").selectedIndex;
+        var addpayButtons = $("#addpaydiv input:radio[name='addpay']");
+        var iaddpay = addpayButtons.index(addpayButtons.filter(':checked'));
+
+        if( x0=='' ) x0='1000';
+        if( x1=='' ) x1='0';
+        if( rate=='' ) rate='4';
+        if( period=='' ) period='10';
+
+        var x0 = parseFloat(x0);
+        var x1 = parseFloat(x1);
+        if(x0==0) x0=x1;
+        rate = parseFloat(rate);
+        period = parseFloat(period);
+        i1 = parseInt(i1);
+        i2 = parseInt(i2);
+        i3 = parseInt(i3);
+        if( x1==0 ) i2=2;
+
+        //var rlook=[52,12,4,1];
+        var rlook=[12,4,1];
+        var rlook4=[365,52,12,4,1];
+        var n1 = rlook[i1];
+        var n2 = rlook[i2];
+        var n3 = rlook4[i3];
+        period /= n3; // convert to years
+        var period1 = period*n1;
+        var period2 = period*n2;
+        rate /= n1;
+        var ratio=n2/n1;
+        var maxperiod = period1>period2?period1:period2;
+        var f1=12/n1;
+        var f2=12/n2;
+        if( (f1>=f2) && ((f1/f2)==Math.round(f1/f2)) ) { f1/=f2; f2=1; }
+        else if( (f2>f1) && ((f2/f1)==Math.round(f2/f1)) ) { f2/=f1; f1=1; }
+        var v = CompoundCalc(x0,rate,x1,f1,f2,maxperiod,iaddpay);
+        var y2=v[v.length-1];
+        var y0 = x0+x1*period2;
+        var p = y2-y0;
+        var total;
+        if( y0>0 )
+           total = y2/y0*100.0-100.0;
+        else
+           total = 0;
+
+        y0 = y0.toFixed(2);
+        p  = (Math.round(100*p)/100).toFixed(2);
+        y2 = y2.toFixed(2);
+        total = (Math.round(100*total)/100).toFixed(2);
+
+        depamount=parseFloat(y0);
+        intamount=parseFloat(p);
+
+        y0 = numberWithCommas(y0);
+        p  = numberWithCommas(p);
+        y2 = numberWithCommas(y2);
+        total = numberWithCommas(total);
+
+        document.getElementById("Text5").value = y0;
+        document.getElementById("Text6").value = p;
+        document.getElementById("Text7").value = y2;
+        document.getElementById("Text8").value = total;
+
+        google.charts.load('current', {'packages':['corechart']});
+        val=v; pay=x1;
+        google.charts.setOnLoadCallback(drawChart);
+
+        DrawTable(v,x1,f2);
+        $("#calcform>div:nth-child(n+12)").show();
+     }
+     function drawChart()
+     {
+        var data = google.visualization.arrayToDataTable([
+           ['Name', 'Amount'],
+           ['Total deposites amount', depamount],
+           ['Total interest amount',  intamount]
+        ]);
+        var options = {};
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+        chart.draw(data, options);
+
+       var arr=[
+          ['Time', 'Principal', 'Cumulative Interest', { role: 'annotation' } ]
+        ];
+        var p=val[0],interest=0;
+        for(var i=0; i<val.length; i++) {
+           if( i>0 ) {
+              p+=pay;
+              interest=val[i]-p;
+              arr.push([i,p,interest,'']);
+           } else {
+              arr.push([i,p,0,'']);
+           }
+        }
+        var data2 = google.visualization.arrayToDataTable(arr);
+        var options2 = {
+          //width: 600,
+          //height: 400,
+          legend: { position: 'top', maxLines: 3 },
+          bar: { groupWidth: '75%' },
+          isStacked: true,
+        };
+        var chart2 = new google.visualization.ColumnChart(document.getElementById("columnchart"));
+        chart2.draw(data2, options2);
+     }
+  </script>
+
+</body>
+
+</html>
